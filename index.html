@@ -1029,10 +1029,56 @@ function td(country) {
         });
       }
 
+function redFilter(feature) {
+        if (feature.properties.enname== "us" ) return true
+  if (feature.properties.enname== "uk" ) return true
+  if (feature.properties.enname== "egypt" ) return true
+  if (feature.properties.enname== "italy" ) return true
+  if (feature.properties.enname== "iran" ) return true
+  if (feature.properties.enname== "russia" ) return true
+  if (feature.properties.enname== "canada" ) return true
+  if (feature.properties.enname== "united arab" ) return true
+  if (feature.properties.enname== "saudi arabia" ) return true
+  if (feature.properties.enname== "beijing") return true
+  if (feature.properties.enname== "xinjiang") return true
+  if (feature.properties.enname== "shanxi") return true
+  if (feature.properties.enname== "ningxia") return true
+  if (feature.properties.enname== "xizang") return true
+  if (feature.properties.enname== "henan") return true
+  if (feature.properties.enname== "jiangsu") return true
+  if (feature.properties.enname== "anhui") return true
+  if (feature.properties.enname== "hubei") return true
+  if (feature.properties.enname== "zhejiang") return true
+  if (feature.properties.enname== "jiangxi") return true
+  if (feature.properties.enname== "hunan") return true
+  if (feature.properties.enname== "yunnan") return true
+  if (feature.properties.enname== "fujian") return true
+  if (feature.properties.enname== "guangxi") return true
+  if (feature.properties.enname== "hainan") return true
+  if (feature.properties.enname== "jilin") return true
+  if (feature.properties.enname== "liaoning") return true
+  if (feature.properties.enname== "tianjin") return true
+  if (feature.properties.enname== "qinghai") return true
+  if (feature.properties.enname== "shaanxi") return true
+  if (feature.properties.enname== "neimenggu") return true
+  if (feature.properties.enname== "chongqing") return true
+  if (feature.properties.enname== "hebei") return true
+  if (feature.properties.enname== "sichuan") return true
+  if (feature.properties.enname== "brazil") return true
+  
+
+}
+
       var areas = new L.TopoJSON(datasets[1], {
         style: style,
-        onEachFeature: onEachFeature
-      }).addTo(mymap);
+        onEachFeature: onEachFeature,
+        filter: redFilter
+      })
+      areas.on("click", function (event) {
+    // Assuming the clicked feature is a shape, not a point marker.
+    map.fitBounds(event.layer.getBounds());
+});
+areas.addTo(mymap);
 
       //add the control panel at the topright corner of the maps
       //control the display of infection level, cases and commnities icon
