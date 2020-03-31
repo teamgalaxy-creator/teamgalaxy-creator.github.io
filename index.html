@@ -1,4 +1,4 @@
-<!doctype html>
+<!Doctype html>
 <html lang="en">
 
 <head>
@@ -497,13 +497,14 @@ function td(country) {
 
 
   //create the base map and set the initial view point
-  var mymap = L.map('map', {
+    var mymap = L.map('map', {
+      center: [38, -120],
       zoomControl: false,
-	center: [30.695,70.692],
+      zoom: 4,
       maxZoom: 10,
-      minZoom: 5,
+      minZoom: 2,
       worldCopyJump: true
-    }).setView([30.695,70.692],5);
+    }).setView([  23.885942,  45.079140], 3 );
     // .fitWorld()
     new L.Control.Zoom({
       position: 'topright'
@@ -514,15 +515,16 @@ function td(country) {
     var gray = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png');
     // var dark = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png').addTo(mymap);
     var voyager =
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png', {
-     format: 'jpg80',
-
-    tileSize: 256,
-    reuseTiles: true, 
-    unloadInvisibleTiles: true
-}).addTo(mymap);
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png').addTo(mymap);
     var satellite =
       L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
+
+    var baseLayers = {
+      'CARTO Light': gray,
+      // 'Dark': dark,
+      'CARTO Voyager': voyager,
+      'ESRI Satellite': satellite
+    }
 
     var baseLayers = {
       'World Light': gray,
