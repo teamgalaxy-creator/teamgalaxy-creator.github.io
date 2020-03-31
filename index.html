@@ -9,7 +9,7 @@
   <!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" /> -->
-  <title>Covid 19 Comparision map</title>
+  <title>Corona Virus Comparision</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/leaflet.css" />
   <link rel="stylesheet" href="css/MarkerCluster.Default.css">
@@ -66,10 +66,8 @@
     </div>
 
     <div id="info" data-simplebar data-simplebar-auto-hide="true">
-      <div id="title" style="font-size:19px"><img src="img/virus_logo.png" width="28px"> Novel Coronavirus (COVID-19) Infection Map
-       
-        <span><a data-toggle="modal" data-target="#resourcewindow"><i class="far fa-newspaper"></i></a></span>
-        <span><a data-toggle="modal" data-target="#infowindow"><i class="nav fas fa-question-circle"></i></a></span>
+      <div id="title" style="font-size:19px"><img src="img/virus_logo.png" width="28px">Covid-19 Comparision Map for Countries
+        
       </div>
 
       <p><span id="placename">GLOBAL TREND</span> </p>
@@ -128,52 +126,12 @@
       <div id="rank-chart"></div>
 
       <div id="footer">
-        <div id="mtToggle">
-          <span id="rankingText"> <b> World or U.S. Rankings</b> </span>
-          <!-- #e8e3d3; -->
-          <!-- #dc3545; -->
-          <span id="rankingIcon"><i style="margin-left:10px;color:#dc3545" class="fas fa-angle-double-right animated infinite slideInLeft delay-2s" style="gray"></i></span>
-          <span id="rankingSpace" style="margin-right:1px"> </span>
-          <input type="checkbox" id="panelSwitcher" unchecked data-toggle="toggle" data-off="Situational Heatmap" data-width="180" data-size="xs" data-on="Back to Map" data-onstyle="secondary" data-offstyle="outline-secondary">
-          <span style="margin-right:25px"> </span>
-          <span id="rankingToggle"><input type="checkbox" id="areaSwitcher" unchecked data-toggle="toggle" data-on="Global Rank" data-width="100" data-size="xs" data-off="U.S. Rank" data-onstyle="secondary" data-offstyle="outline-secondary">
-          </span>
-        </div>
+        
 
-        <div id="content-explain" > In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. The gray slash texture indicates no previous cases are discovered;
-          the green
-          texture means the region in which all the infected cases have recovered.</div>
+        
 
-        <div><i class='fas fa-users' style="color:#dc3545"></i> &nbsp; Infection Case(s) indicates one or several confirmed infected individual(s) in the U.S., excluding those were identified from the Diamond Princess.
-          The dataset of the infected cases are continuously enriched from different data portals such as
-          <a href="https://coronavirus.1point3acres.com/en" target="_blank">1point3acres</a> and state officials. Notably, <span class="emphasis"> each case was geocoded to an
-            approximate location within the county
-            which reported the case. The location is by no means identical to the exact address where the case was discovered.</span>
-        </div>
-
-        <div> <i class="fas fa-procedures" style="color:#dc3545"> </i> &nbsp; An Infected Community indicates a community or village where confirmed cases were found. The local governments in China have taken strict measures to isolate the residents
-          of
-          these
-          places from the outside. The dataset of infected community can be found at <a href="https://lab.ahusmart.com/nCoV/api/detail" target="_blank">ahusmart</a>.
-        </div>
-
-        <div>This map is made by the <a href="http://hgis.uw.edu" target="_blank">Humanistic GIS Lab at University of Washington - Seattle</a>.
-          The data are mainly collected from <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/" target="_blank">WHO</a>,
-          <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html" target="_blank">CDC</a>,
-          <a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html" target="_blank">PHA</a> ,
-          <a href="http://2019ncov.chinacdc.cn/2019-nCoV/" target="_blank">China CDC</a>,
-          <a href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546" target="_blank">NBC News</a>,
-          and <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia" target="_blank">Baidu</a>. Regarding the state level data in the U.S., they are collected from CDC, state officials and <a
-            href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546" target="_blank">NBC News</a>.
-          The computational resources are provided by <a href="https://csde.washington.edu/" target="_blank">UW's Center for Studies in Demography and Ecology</a>. The base maps are from <a target="_blank"
-            href="https://github.com/CartoDB/cartodb/wiki/BaseMaps-available">Carto</a> and <a href="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/" target="_blank">ESRI</a>, and the geospatial data for the base maps
-          are acquired from the <a href="openstreetmap.org/copyright" target="_blank"> OpenStreetMap</a>.
-          <span class="emphasis">The timely updated dataset of the virus infection can be downloaded <a href="http://hgis.uw.edu/virus/assets/virus.csv" target="_blank">here.</a></span> Details
-          about this interactive
-          map can be found <a data-toggle="modal" data-target="#infowindow"> here</a>. If you have any questions or
-          concerns, please contact <a href="mailto:zhaobo@uw.edu">Bo Zhao</a>.
-        </div>
-        <p align="right" style="margin-right:25px; margin-top:-15px"><a href="https://hgis.uw.edu/2020/03/18/covid-19-novel-coronavirus-infection-map/" target="_blank"><img src="img/logo.png" width="130px"></img></a></p>
+       
+        
 
       </div>
 
@@ -252,26 +210,38 @@
         </div>
         <div class="modal-body">
           <div id="demo" class="carousel " data-ride="carousel">
-          
+            <p>This online interactive map enables users to track both the global and local trends of Novel Coronavirus infection since Jan 21st, 2020. The supporting dataset is timely collected from multiple official sources and then plotted onto
+              this map.</p>
             <h5>Data Sources</h5>
             <p>The data are mainly collected from 1. <a href="http://www.nhc.gov.cn" target="_blank">National Health Commission</a> (NHC) of the People’s Republic of China
-            
-              
-              2. <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/" target="_blank">World Health Organization</a> (WHO)
-              3. <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html" target="_blank">Centers for Disease Control and Prevention</a> (CDC)
-              4. <a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html" target="_blank">Public Health Agency of Canada</a> (PHAC)
-              5. <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia" target="_blank">Baidu</a>.
-              6. <a href="https://lab.ahusmart.com/nCoV/api/detail" target="_blank">ahusmart</a> - the infected community in China.
-              7. the state officals of different states in the U.S.
-              8. <a href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546" target="_blank">NBC News</a>.
+              2. China’s Provincial & Municipal Health Commission, China’s Provincial & Municipal government database
+              3. Public data published from Hongkong, Macau, and Taiwan official channels
+              4. <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/" target="_blank">World Health Organization</a> (WHO)
+              5. <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html" target="_blank">Centers for Disease Control and Prevention</a> (CDC)
+              6. <a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html" target="_blank">Public Health Agency of Canada</a> (PHAC)
+              7. <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia" target="_blank">Baidu</a>.
+              8. <a href="https://lab.ahusmart.com/nCoV/api/detail" target="_blank">ahusmart</a> - the infected community in China.
+              9. the state officals of different states in the U.S.
+              10. <a href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546" target="_blank">NBC News</a>.
 
               The dataset (in SQLite format) can be downloaded from <a href="http://hgis.uw.edu/virus/assets/virus.db" target="_blank">here</a>.
               You can view the data (in CSV format) at <a href="http://hgis.uw.edu/virus/assets/virus.csv" target="_blank">here</a>.</p>
 
-            <p> The first sequel represents the number of confirmed cases, the second sequel represents suspected
+            <p>In the data table, each entry indicates the infection status in the format of "#-#-#-#" -- a 4-sequel entry divided by dashes. The first sequel represents the number of confirmed cases, the second sequel represents suspected
               cases, the third sequel represents cured cases, the fourth sequel represents death cases.</p>
 
+            <h5>Update Procedure</h5>
 
+            <p>The country-level data is collected from WHO, while the data of each province in China is collected from multiple sources such as China's NHC，Mapmiao and Baidu. Notably, we also refer to CDC to verify the virus spreading status in the
+              U.S. To
+              make a timely data and map updates, we collect the data every 4 hours, and verify the data quality per day. In addition, we plan to provide finer-scale data from China (the county level), U.S. (the state level) and Canada (the province
+              level) in the next version.</p>
+
+            <h5>Acknowledgment</h5>
+            <p>
+              <li>Team members: Bo Zhao, Fengyu Xu, Lola Kang, Joshua Ji, and Steven Bao.</li>
+              <li>The Server is hosted at UW’s <a href="https://https://csde.washington.edu/" target="_blank">Center for Studies in Demography and Ecology (CSDE)</a>.</li>
+            </p>
           </div>
         </div>
       </div>
@@ -329,7 +299,7 @@
               </tr>
               <tr>
                 <td><a href="https://www.ssm.gov.mo/apps1/PreventWuhanInfection/ch.aspx#clg17046" target="_blank"> Macau</a></td>
-              
+                <td><a href="https://sites.google.com/cdc.gov.tw/2019ncov/taiwan" target="_blank"> Taiwan</a></td>
                 <td><a href="http://wsjkw.hlj.gov.cn/index.php/Home/Zwgk/all/typeid/42" target="_blank"> Heilongjiang</a></td>
                 <td><a href="https://v.gxnews.com.cn/zt/2020yq" target="_blank"> Guangxi</a></td>
               </tr>
@@ -337,12 +307,17 @@
                 <td><a href="http://wjw.ah.gov.cn/news_list_477_1.html" target="_blank"> Anhui</a></td>
                 <td><a href="http://wjw.nmg.gov.cn/xwzx/xwfb/index.shtml" target="_blank"> Neimenggu</a></td>
                 <td><a href="http://wsjkw.sc.gov.cn/scwsjkw/gzbd01/ztwzlmgl.shtml" target="_blank"> Sichuan</a></td>
-               
+                <td><a href="https://www.chp.gov.hk/files/pdf/enhanced_sur_pneumonia_wuhan_chi.pdf" target="_blank"> Hongkong</a></td>
               </tr>
             </table>
             <br><b> the US - Official Websites</b>
             <table style="width:100%">
-            
+              <tr>
+                <td><a href="http://www.alabamapublichealth.gov/infectiousdiseases/2019-coronavirus.html" target="_blank">Alabama</a></td>
+                <td><a href="https://dphhs.mt.gov/publichealth/cdepi/diseases/coronavirusmt" target="_blank">Montana</a></td>
+                <td><a href="http://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/monitoring.aspx" target="_blank">Alaska</a></td>
+                <td><a href="http://dhhs.ne.gov/Pages/Coronavirus.aspx" target="_blank">Nebraska</a></td>
+              </tr>
               <tr>
                 <td><a href="https://www.azdhs.gov/preparedness/epidemiology-disease-control/infectious-disease-epidemiology/index.php#novel-coronavirus-home" target="_blank">Arizona</a></td>
                 <td><a href="http://dpbh.nv.gov/Programs/OPHIE/dta/Hot_Topics/Coronavirus/" target="_blank">Nevada</a></td>
@@ -523,13 +498,12 @@ function td(country) {
 
   //create the base map and set the initial view point
   var mymap = L.map('map', {
-      center: [38, -120],
       zoomControl: false,
-      zoom: 4,
+	center: [30.695,70.692],
       maxZoom: 10,
-      minZoom: 2,
+      minZoom: 5,
       worldCopyJump: true
-    }).setView([  23.885942,  45.079140], 3 );
+    }).setView([30.695,70.692],5);
     // .fitWorld()
     new L.Control.Zoom({
       position: 'topright'
@@ -540,15 +514,21 @@ function td(country) {
     var gray = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png');
     // var dark = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png').addTo(mymap);
     var voyager =
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png').addTo(mymap);
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png', {
+     format: 'jpg80',
+
+    tileSize: 256,
+    reuseTiles: true, 
+    unloadInvisibleTiles: true
+}).addTo(mymap);
     var satellite =
       L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
 
     var baseLayers = {
-      'CARTO Light': gray,
+      'World Light': gray,
       // 'Dark': dark,
-      'CARTO Voyager': voyager,
-      'ESRI Satellite': satellite
+      'lig': voyager,
+      'Satellite': satellite
     }
 
 
@@ -620,7 +600,7 @@ function td(country) {
 
     //load all datasets through d3 and store them in an array
      Promise.all([
-     d3.csv('assets/virus.csv'), //datasets[0]
+      d3.csv('assets/virus.csv'), //datasets[0]
       d3.json("assets/all-topo-15.json"), //datasets[1]
       d3.csv('assets/communities.csv'), //chinese cases
       d3.csv('assets/timestamp.txt'), //datasets[3]
@@ -1046,63 +1026,18 @@ function td(country) {
           mouseout: resetHighlight
         });
       }
-      function redFilter(feature) {
-        if (feature.properties.enname== "us" ) return true
-  if (feature.properties.enname== "uk" ) return true
-  if (feature.properties.enname== "egypt" ) return true
-  if (feature.properties.enname== "italy" ) return true
-  if (feature.properties.enname== "iran" ) return true
-  if (feature.properties.enname== "russia" ) return true
-  if (feature.properties.enname== "canada" ) return true
-  if (feature.properties.enname== "united arab" ) return true
-  if (feature.properties.enname== "saudi arabia" ) return true
-  if (feature.properties.enname== "beijing") return true
-  if (feature.properties.enname== "xinjiang") return true
-  if (feature.properties.enname== "shanxi") return true
-  if (feature.properties.enname== "ningxia") return true
-  if (feature.properties.enname== "xizang") return true
-  if (feature.properties.enname== "henan") return true
-  if (feature.properties.enname== "jiangsu") return true
-  if (feature.properties.enname== "anhui") return true
-  if (feature.properties.enname== "hubei") return true
-  if (feature.properties.enname== "zhejiang") return true
-  if (feature.properties.enname== "jiangxi") return true
-  if (feature.properties.enname== "hunan") return true
-  if (feature.properties.enname== "yunnan") return true
-  if (feature.properties.enname== "fujian") return true
-  if (feature.properties.enname== "guangxi") return true
-  if (feature.properties.enname== "hainan") return true
-  if (feature.properties.enname== "jilin") return true
-  if (feature.properties.enname== "liaoning") return true
-  if (feature.properties.enname== "tianjin") return true
-  if (feature.properties.enname== "qinghai") return true
-  if (feature.properties.enname== "shaanxi") return true
-  if (feature.properties.enname== "neimenggu") return true
-  if (feature.properties.enname== "chongqing") return true
-  if (feature.properties.enname== "hebei") return true
-  if (feature.properties.enname== "sichuan") return true
-  if (feature.properties.enname== "brazil") return true
-  
-
-}
 
       var areas = new L.TopoJSON(datasets[1], {
         style: style,
-        onEachFeature: onEachFeature,
-        filter: redFilter
-      })
-      areas.on("click", function (event) {
-    // Assuming the clicked feature is a shape, not a point marker.
-    map.fitBounds(event.layer.getBounds());
-});
-areas.addTo(mymap);
+        onEachFeature: onEachFeature
+      }).addTo(mymap);
 
       //add the control panel at the topright corner of the maps
       //control the display of infection level, cases and commnities icon
       new L.control.layers(baseLayers, {
-        "Infection Level": areas,
-        "Infection Case(s) &nbsp;&nbsp; <i class='fas fa-users' style='color: #dc3545;'></i>": cases,
-        "Infected Community &nbsp;&nbsp; <i class='fas fa-procedures' style='color: #dc3545;'></i>": communities
+        "areas": areas,
+        "Cases; <i class='fas fa-users' style='color: #dc3545;'></i>": cases,
+        
       }, {
         collapsed: false
       }).addTo(mymap);
@@ -1407,7 +1342,7 @@ areas.addTo(mymap);
           $("#rankingToggle").css("visibility", "hidden");
           $(".leaflet-control-container").css("visibility", "visible");
           $("#content-explain").text(
-            "In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. The gray slash texture indicates that no previous cases are discovered; the green slash texture  indicates the region in which all the infected cases has recovered (or passed away)."
+            ""
           );
           $("thead").html('');
           $("tbody").html('');
@@ -1417,7 +1352,7 @@ areas.addTo(mymap);
 
           $("#rankingToggle").css('visibility', 'visible');
           $("#content-explain").text(
-            "This situational heatmap (Beta) illustrates the rank of active confirmed cases in all countries or U.S. states in the descending order. It uses a series of blocks in different size and color to represent the number and recover rate of coronavirus cases of different places within the last 20 days. The size of the block increases as the number of active confirmed case increases. While the color of the block, in a \"yellow-orange-red\" ramp, gets darker as the 'active / aggregate' rate (a.k.a recover rate) increases."
+            ""
           );
           $("#table").css("visibility", "visible");
           $(".leaflet-control-container").css("visibility", "hidden");
@@ -1484,6 +1419,9 @@ areas.addTo(mymap);
   </script>
   <script async src='https://www.google-analytics.com/analytics.js'></script>
   <!-- Google Analytics End-->
+
+});
+
 </body>
 
 </html>
